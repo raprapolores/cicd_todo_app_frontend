@@ -1,24 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/Home";
+import ListTodo from "./components/ListTodo";
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Logout from "./components/Logout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <div className="min-h-screen bg-gray-100 flex flex-col">
+              <header className="bg-blue-600 text-white p-4">
+                <div className="container mx-auto flex justify-between items-center">
+                  <h1 className="text-2xl font-bold">My App</h1>
+                </div>
+              </header>
+
+              <main className="flex-1 container mx-auto p-6">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/todoList" element={<ListTodo />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/logout" element={<Logout />} />
+                </Routes>
+              </main>
+
+              <footer className="bg-blue-600 text-white p-4 mt-6">
+                <div className="container mx-auto text-center">
+                  <p>&copy; 2025 My App. All rights reserved.</p>
+                </div>
+              </footer>
+            </div>
+      </BrowserRouter>
   );
 }
 
