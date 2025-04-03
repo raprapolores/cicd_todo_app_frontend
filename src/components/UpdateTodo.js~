@@ -3,7 +3,6 @@ import axios from "axios";
 import { BaseUrl } from "../constants";
 
 function UpdateTodo(props) {
-  // Added update to do function and integrated api
   const todo_id = props.todo_id;
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
