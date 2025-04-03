@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
-import {BaseUrl} from "../constants";
+import { BaseUrl } from "../constants";
+import Register from "./Register";
 
 function Login(props) {
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
-    const [message, setMessage] = useState("")
 
     useEffect(() => {
         if (localStorage.getItem("Token")) {
@@ -39,12 +39,10 @@ function Login(props) {
             .then((response) => {
                 console.log(JSON.stringify(response.data));
                 localStorage.setItem("Token", response.data.token);
-                setMessage("Logged in successfully");
                 window.location.href = "/todoList";
             })
             .catch((error) => {
                 console.log(error);
-                setMessage(error.response.data);
             });
     }
     return (
@@ -80,13 +78,6 @@ function Login(props) {
                 >
                     Login
                 </button>
-
-                {/* Message */}
-                {message && (
-                    <p className={`mt-4 text-center ${message.includes('successfully') ? 'text-green-600' : 'text-red-600'}`}>
-                        {message}
-                    </p>
-                )}
             </div>
         </div>
     );

@@ -26,10 +26,10 @@ function DetailTodo(props) {
     }, [todo]);
 
     return (
-        <div>
-            <h2>{todo.title}</h2>
-            <p>{todo.content}</p>
-        </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mt-8">
+            <h1 className="text-4xl font-semibold text-gray-800 mb-4">{todo.title}</h1>
+            <p className="text-lg text-gray-600">{todo.content}</p>
+          </div>
     );
 }
 
