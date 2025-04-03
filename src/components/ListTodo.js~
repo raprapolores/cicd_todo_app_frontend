@@ -6,7 +6,6 @@ import axios from "axios";
 import UpdateTodo from "./UpdateTodo";
 
 function ListTodo(props) {
-    // Added delete to do function and integrated api
     const [todos, setTodos] = useState([])
     const [token, setToken] = useState("")
     const [Err, setErr] = useState("")
