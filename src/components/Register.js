@@ -4,6 +4,7 @@ import {BaseUrl} from "../constants";
 import axios from "axios";
 
 function Register(props) {
+  // Added register component and integrated register API
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
