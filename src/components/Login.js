@@ -4,6 +4,7 @@ import { BaseUrl } from "../constants";
 import Register from "./Register";
 
 function Login(props) {
+    // Added login function and api integration
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
 
