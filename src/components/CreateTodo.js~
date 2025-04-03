@@ -3,7 +3,7 @@ import axios from "axios";
 import {BaseUrl} from "../constants";
 
 function CreateTodo(props) {
-    // Created To Do function views and integrated api
+    // Created To Do function and integrated api
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
     const [completed, setCompleted] = useState('false');
