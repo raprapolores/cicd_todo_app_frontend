@@ -1,1 +1,1 @@
-export const BaseUrl = "http://localhost:8000"
+export const BaseUrl = "https://cicd-todo-app-backend.vercel.app"
